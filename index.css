@@ -1,0 +1,703 @@
+@font-face {
+    font-family: escuro;
+    src: url(fontes/04B_30__.TTF) format('truetype');
+}
+
+@font-face {
+    font-family: mar;
+    src: url(fontes/bBeachOcean.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: flores;
+    src: url(fontes/Floresta.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: terra;
+    src: url(fontes/Florania\ Trial.otf) format('opentype');
+}
+
+@font-face {
+    font-family: claro;
+    src: url(fontes/Dreamy.ttf) format('truetype');
+}
+
+.posicao-direita {
+    margin-right: 200px; 
+}
+
+
+
+
+
+:root {
+    --body-bg-light: #FEF2EA;
+    --button-bg-light: #ffb6c1;
+    --box-bg-light: #F9E0D3;
+    --text-color-light: #484747; 
+    --round-button-bg:#ffb6c1;
+    --i-color: #495057;
+    --branco: #ffffff;
+    --marfim: #d8dfe8;
+    --preto: #000000;
+    --sombra-box:rgba(72, 71, 71, 0.6);
+    --fonte-claro: claro;
+}
+
+
+h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: margin-right 0.3s; 
+}
+
+.h1-escuro {
+    margin-right: 20px;
+}
+
+body {
+    background-color: var(--body-bg-light);
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    transition: background-color 0.3s;
+}
+
+.paintbrushButton {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--branco); 
+    border-radius: 50%;
+    background-color: var(--button-bg-light);
+    cursor: pointer;
+    transition: transform 0.2s; 
+}
+
+.customBox {
+    position: relative;
+    width: 593px;
+    height: 380px;
+    background-color: var(--box-bg-light);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 140px 0px 0 100px;
+    box-shadow: 0 4px 8px var(--sombra-box);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#textInput1,
+#textInput2 {
+    width: 540px;
+    height: 320px;
+    margin-top: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    margin-left: 23px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color-light);
+    font-size: 25px;
+    resize: none;
+}
+
+.roundButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--round-button-bg) ;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px var(--sombra-box);
+    transition: transform 0.2s; 
+}
+
+.roundButton i {
+    color: var(--text-color-light)
+}
+
+.infoText {
+    margin-top: 10px;
+    color: var(--i-color) ;
+    padding-left: 230px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+}
+
+.infoText i {
+    color: var(--i-color);
+    margin-right: 5px;
+}
+
+.encryptButton {
+    background-color: var(--button-bg-light);
+    color: var(--branco);
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+}
+
+.decryptButton {
+    background-color: var(--marfim);
+    color: var(--button-bg-light);
+    border: 2px solid var(--button-bg-light);
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+}
+
+.encryptButton:hover {
+    background-color: var(--marfim);
+    color: var(--button-bg-light);
+    border: 2px solid var(--button-bg-light);
+}
+
+.decryptButton:hover {
+    background-color: var(--button-bg-light);
+    color: var(--branco);
+    border: 2px solid var(--branco);
+}
+
+.socialLink {
+    display: block;
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s; 
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+}
+
+.socialLink:hover {
+    color: var(--button-bg-light);
+}
+
+
+
+/* modo terra */
+.terra{
+    --body-terra: #B3E6AD;
+    --caixa1: #B3E5CA;
+    --preto4: #000000;
+    --branco4: #ffffff;
+    --botoes1: #FFB6C1;
+    --bt-fundo1: #D8DFE8;
+    --sombra-box4:rgba(72, 71, 71, 0.6);
+    --font-terra: terra;
+}
+
+H1 .terra{
+    font-family: var(--font-terra);
+    color: var(--text-color-light);
+    font-size: 45px;
+}
+
+.terra-font {
+    font-family: flores;
+}
+
+body.terra {
+    background-color: var(--body-terra);
+}
+
+.terra .paintbrushButton{
+    background-color: var(--botoes1);
+    border: 2px solid var(--botoes1);
+}
+
+.terra .customBox {
+    background-color: var(--caixa1);
+    box-shadow: 0 4px 8px var(--sombra-box4);
+}
+
+.terra #textInput1,
+#textInput2 {
+    color: var(--branco4);
+}
+
+.terra .roundButton{
+    background-color: var(--botoes1);
+    box-shadow: 0 2px 4px var(--sombra-box4);
+}
+
+.terra .roundButton i{
+    color: var(--branco4);
+}
+
+.terra .infoText{
+    color: var(--preto4);
+}
+
+.terra .infoText i{
+    color: var(--preto4);
+}
+
+.terra .encryptButton {
+    background-color: var(--botoes1);
+    color: var(--branco4);
+}
+
+.terra .decryptButton {
+    background-color: var(--bt-fundo1);
+    color: var(--botoes1);
+    border: 2px solid var(--botoes1);
+}
+
+.terra .encryptButton:hover {
+    background-color: var(--bt-fundo1);
+    color: var(--botoes1);
+    border: 2px solid var(--botoes1);
+}
+
+.terra .decryptButton:hover {
+    background-color: var(--botoes1);
+    color: var(--bt-fundo1);
+    border: 2px solid var(--bt-fundo1);
+}
+
+.terra .socialLink {
+    color: var(--preto4);
+}
+
+.terra .socialLink:hover {
+    color: var(--botoes1);
+}
+
+
+
+
+/* modo mar */
+.mar{
+    --body-mar: #ADD9E6;
+    --caixa: #AFDDEC;
+    --branco3: #ffffff;
+    --preto3: #000000;
+    --botoes: #FFB6C1;
+    --bt-fundo: #D8DFE8;
+    --sombra-box3:rgba(72, 71, 71, 0.6);
+}
+
+body.mar {
+    background-color: var(--body-mar);
+}
+
+.mar .paintbrushButton{
+    background-color: var(--botoes);
+    border: 2px solid var(--botoes);
+}
+
+.mar .customBox {
+    background-color: var(--caixa);
+    box-shadow: 0 4px 8px var(--sombra-box3);
+}
+
+.mar #textInput1,
+#textInput2 {
+    color: var(--branco3);
+}
+
+.mar .roundButton{
+    background-color: var(--botoes);
+    box-shadow: 0 2px 4px var(--sombra-box3);
+}
+
+.mar .roundButton i{
+    color: var(--branco3);
+}
+
+.mar .infoText{
+    color: var(--branco3);
+}
+
+.mar .infoText i{
+    color: var(--branco3);
+}
+
+.mar .encryptButton {
+    background-color: var(--botoes);
+    color: var(--branco);
+}
+
+.mar .decryptButton {
+    background-color: var(--bt-fundo);
+    color: var(--botoes);
+    border: 2px solid var(--botoes);
+}
+
+.mar .encryptButton:hover {
+    background-color: var(--bt-fundo);
+    color: var(--botoes);
+    border: 2px solid var(--botoes);
+}
+
+.mar .decryptButton:hover {
+    background-color: var(--botoes);
+    color: var(--bt-fundo);
+    border: 2px solid var(--bt-fundo);
+}
+
+.mar .socialLink {
+    color: var(--preto3);
+}
+
+.mar .socialLink:hover {
+    color: var(--botoes);
+}
+
+
+
+/* modo escuro */
+.escuro {
+    --body-bg: #000000;
+    --button-bg: #400959;
+    --text-color: #ffffff;
+    --box-bg: #484747;
+    --cinza: #D8DFE8;
+    --branco2: #ffffff;
+    --sombra2: rgba(255, 182, 193, 0.7);
+}
+
+
+
+body.escuro {
+    background-color: var(--body-bg);
+}
+
+.escuro .paintbrushButton{
+    background-color: var(--button-bg);
+    border: 2px solid var(--button-bg);
+}
+
+.escuro .customBox {
+    background-color: var(--box-bg);
+    box-shadow: 0 4px 8px var(--sombra2);
+}
+
+.escuro #textInput1,
+#textInput2 {
+    color: var(--text-color);
+}
+
+.escuro .roundButton{
+    background-color: var(--button-bg);
+    box-shadow: 0 2px 4px var(--sombra2);
+}
+
+.escuro .roundButton i{
+    color: var(--text-color);
+}
+
+.escuro .infoText{
+    color: var(--text-color);
+}
+
+.escuro .infoText i{
+    color: var(--text-color);
+}
+
+.escuro .encryptButton {
+    background-color: var(--button-bg);
+    color: var(--branco);
+}
+
+.escuro .decryptButton {
+    background-color: var(--cinza);
+    color: var(--button-bg);
+    border: 2px solid var(--button-bg);
+}
+
+.escuro .encryptButton:hover {
+    background-color: var(--cinza);
+    color: var(--button-bg);
+    border: 2px solid var(--button-bg);
+}
+
+.escuro .decryptButton:hover {
+    background-color: var(--button-bg);
+    color: var(--cinza);
+    border: 2px solid var(--cinza);
+}
+
+.escuro .socialLink {
+    color: var(--branco2);
+}
+
+.escuro .socialLink:hover {
+    color: var(--button-bg);
+}
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: flex;
+}
+
+.customBox {
+    position: relative;
+    width: 593px;
+    height: 380px;
+    background-color: #F9E0D3;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 140px 0px 0 100px;
+    box-shadow: 0 4px 8px rgba(72, 71, 71, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+#textInput1::placeholder,
+#textInput2::placeholder {
+    font-size: 22px;
+    text-align: left;
+}
+
+.customBox:nth-child(2) #textInput2::placeholder {
+    font-size: 22px;
+    text-align: center;
+    transform: translateY(110px);
+}
+
+
+
+
+.roundButton:hover {
+    transform: scale(1.1); 
+}
+
+
+.infoTextContent {
+    vertical-align: middle;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.encryptButton,
+.decryptButton {
+    width: 48%;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s, border 0.3s; 
+}
+
+.socialLinks {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.topRightButton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+.paintbrushButton:hover {
+    transform: scale(1.1); 
+}
+
+.paintbrushButton i {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+.menuOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(159, 158, 158, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.menuWords {
+    background-color: #9F9E9E;
+    opacity: 0.7;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+}
+
+.menuButton {
+    display: block;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.menuButton:hover {
+    text-decoration: underline;
+}
+
+.clearButton,
+.earthButton,
+.seaButton,
+.darkButton {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff; 
+    text-decoration: none; 
+    margin-bottom: 5px; 
+}
+
+.clearButton:hover,
+.earthButton:hover,
+.seaButton:hover,
+.darkButton:hover {
+    color: #000000; 
+    text-decoration: none; 
+}
+
+.clearButton:active,
+.earthButton:active,
+.seaButton:active,
+.darkButton:active {
+    color: #000000; 
+}
+
+
+.menuWords.show {
+    display: flex;
+}
+
+
+
+#menuWords.show {
+    background-color: #9F9E9E;
+    opacity: 0.9;
+    position: fixed;
+    display: none;
+    top: 10px; 
+    left: 1343px; 
+    width: 100px; 
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+#menuOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); 
+    z-index: 1; 
+}
+
+
+.wordButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff; 
+    transition: color 0.3s; 
+}
+
+.wordButton:hover {
+    text-decoration: underline;
+}
+
+#menuOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); 
+    z-index: 1; 
+}
+
+.menuContainer {
+    position: relative;
+    top: 75px;
+    right: 1203px;
+    width: 100px;
+    z-index: 2;
+}
+
+
+.popup {
+    display: none;
+    background-color: #9F9E9E;
+    opacity: 0.7;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 2;
+    flex-direction: column;
+}
+
+.popupButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffffff; 
+}
+
+.popupButton:hover {
+    text-decoration: underline;
+}

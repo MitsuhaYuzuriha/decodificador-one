@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Encriptador</title>
+</head>
+<body>
+
+    <h1 class="titulo-modo">Decodificador ONE</h1>
+
+    <div class="topRightButton">
+        <button class="paintbrushButton" onclick="toggleMenu()">
+            <i class="fas fa-paintbrush"></i>
+        </button>
+    </div>
+
+    <div class="menuContainer">
+        <div class="menuWords" id="menuWords">
+            <button class="menuButton" onclick="fecharMenu('Claro')">Claro</button>
+            <button class="menuButton" onclick="fecharMenu('Terra')">Terra</button>
+            <button class="menuButton" onclick="fecharMenu('Mar')">Mar</button>
+            <button class="menuButton" onclick="fecharMenu('Escuro')">Escuro</button>
+        </div>
+    </div>
+    
+
+
+    <div class="container">
+        <div class="customBox">
+            <textarea class="textarea" id="textInput1" placeholder="Digite seu texto"></textarea>
+        </div>
+        <div class="customBox withButton">
+            <textarea class="mensagem" id="textInput2" placeholder="Nenhuma mensagem encontrada. Digite um texto que você deseja criptografar ou descriptografar."></textarea>
+
+            <button class="roundButton" onclick="copiarTexto()">
+                <i class="far fa-copy"></i>
+            </button>
+            <div class="msgCopiar"></div>
+        </div>
+    </div>
+
+    <div class="infoText">
+        <i class="fas fa-circle-exclamation"></i> <span class="infoTextContent">Apenas letras minúsculas e sem acento.</span>
+    </div>
+    <div class="buttonsContainer">
+        <button class="encryptButton" onclick="btnCriptografar()">Criptografar</button>
+        <button class="decryptButton" onclick="btndDescriptografar()">Descriptografar</button>
+    </div>
+
+    <div class="socialLinks">
+        <a href="https://www.linkedin.com/in/jian-m-6303a0226/" target="_blank" class="socialLink" id="linkedinLink">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+        </a>
+        <a href="https://github.com/MitsuhaYuzuriha" target="_blank" class="socialLink" id="githubLink">
+            <i class="fab fa-github"></i>
+            GitHub
+        </a>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
